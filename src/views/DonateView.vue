@@ -1,8 +1,8 @@
 <template>
   <div>
-    <section class="page-hero page-hero-orange" aria-labelledby="involved-page-title">
-      <p class="eyebrow"><span></span> Get involved</p>
-      <h1 id="involved-page-title">Useful things deserve another life.</h1>
+    <section class="page-hero page-hero-orange" aria-labelledby="donate-page-title">
+      <p class="eyebrow"><span></span> Donate</p>
+      <h1 id="donate-page-title">Useful things deserve another life.</h1>
       <p class="page-intro">
         Put idle tools, equipment and materials back to work in the hands of NORM’s community of
         makers.
@@ -20,12 +20,12 @@
       </div>
 
       <div class="donation-list" aria-label="Items NORM welcomes">
-        <div><span>01</span><strong>Hand tools</strong></div>
-        <div><span>02</span><strong>Power tools</strong></div>
-        <div><span>03</span><strong>Larger equipment</strong></div>
-        <div><span>04</span><strong>Good timber + plywood</strong></div>
-        <div><span>05</span><strong>Clean steel</strong></div>
-        <div><span>06</span><strong>Weird + wonderful objects</strong></div>
+        <div><strong>Hand tools</strong></div>
+        <div><strong>Power tools</strong></div>
+        <div><strong>Larger equipment</strong></div>
+        <div><strong>Good timber + plywood</strong></div>
+        <div><strong>Clean steel</strong></div>
+        <div><strong>Weird + wonderful objects</strong></div>
       </div>
     </section>
 

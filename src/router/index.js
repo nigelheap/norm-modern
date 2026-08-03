@@ -47,15 +47,16 @@ const router = createRouter({
       },
     },
     {
-      path: '/get-involved',
-      name: 'get-involved',
-      component: () => import('../views/GetInvolvedView.vue'),
+      path: '/donate',
+      name: 'donate',
+      component: () => import('../views/DonateView.vue'),
       meta: {
-        title: 'Get involved — NORM',
+        title: 'Donate — NORM',
         description:
           'Donate useful tools, equipment and materials to NORM’s volunteer-run community of makers.',
       },
     },
+    { path: '/get-involved', redirect: '/donate' },
     {
       path: '/contact',
       name: 'contact',

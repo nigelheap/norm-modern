@@ -63,10 +63,10 @@
           </div>
           <i aria-hidden="true">↗</i>
         </RouterLink>
-        <RouterLink class="route-card" to="/get-involved">
+        <RouterLink class="route-card" to="/donate">
           <span class="route-number">03</span>
           <div>
-            <h2>Get involved</h2>
+            <h2>Donate</h2>
             <p>Give useful tools and materials a new life in the hands of local makers.</p>
           </div>
           <i aria-hidden="true">↗</i>
