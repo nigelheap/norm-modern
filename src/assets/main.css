@@ -218,7 +218,6 @@ select {
 
 .hero h1,
 .section h2,
-.share-copy h2,
 .donate-copy h2,
 .contact-section h2 {
   margin: 0;
@@ -382,80 +381,21 @@ select {
   line-height: 1.65;
 }
 
-.share-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 42rem;
-  color: var(--paper);
-  background: var(--ink);
-}
-
-.share-stat,
-.share-copy {
-  padding: var(--section-space) var(--gutter);
-}
-
-.share-stat {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-right: 1px solid rgba(243, 240, 232, 0.25);
-}
-
-.stat-number {
-  color: var(--orange);
-  font-size: clamp(6rem, 15vw, 15rem);
-  font-weight: 600;
-  letter-spacing: -0.09em;
-  line-height: 0.75;
-}
-
-.stat-unit {
-  margin-top: 1.75rem;
-  font-size: clamp(1.2rem, 2vw, 2rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-}
-
-.share-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .eyebrow-light {
   color: var(--paper);
 }
 
-
-.share-copy h2,
 .donate-copy h2 {
   max-width: 11ch;
   font-size: clamp(3rem, 6.2vw, 7rem);
 }
 
-.share-copy > p:not(.eyebrow),
 .donate-detail > p {
   max-width: 36rem;
   margin: 2rem 0 0;
   color: rgba(243, 240, 232, 0.7);
   font-size: 1rem;
   line-height: 1.65;
-}
-
-blockquote {
-  margin: 3rem 0 0;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(243, 240, 232, 0.25);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-blockquote cite {
-  color: rgba(243, 240, 232, 0.55);
-  font-style: normal;
 }
 
 .workshop-section {
@@ -976,7 +916,6 @@ blockquote cite {
 }
 
 .home-closing h2,
-.warehouse-copy h2,
 .page-cta h2 {
   max-width: 10ch;
   margin: 0;
@@ -988,27 +927,6 @@ blockquote cite {
 
 .home-closing .button {
   margin-top: 3rem;
-}
-
-.warehouse-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: clamp(4rem, 9vw, 9rem);
-  align-items: end;
-  padding: var(--section-space) var(--gutter);
-  color: var(--paper);
-  background: var(--ink);
-}
-
-.warehouse-detail > p {
-  max-width: 36rem;
-  margin: 0;
-  color: rgba(243, 240, 232, 0.7);
-  line-height: 1.65;
-}
-
-.warehouse-detail .button {
-  margin-top: 2rem;
 }
 
 .page-cta {
@@ -1211,7 +1129,6 @@ blockquote cite {
   }
 
   .home-intro-grid,
-  .warehouse-layout,
   .page-cta {
     grid-template-columns: 1fr;
   }
@@ -1224,15 +1141,8 @@ blockquote cite {
     width: min(100%, 32rem);
   }
 
-  .share-section,
   .donate-section {
     grid-template-columns: 1fr;
-  }
-
-  .share-stat {
-    min-height: 27rem;
-    border-right: 0;
-    border-bottom: 1px solid rgba(243, 240, 232, 0.25);
   }
 
   .section-heading-row,
@@ -1318,7 +1228,6 @@ blockquote cite {
 
   .hero h1,
   .section h2,
-  .share-copy h2,
   .donate-copy h2,
   .contact-section h2 {
     letter-spacing: -0.055em;
@@ -1341,16 +1250,6 @@ blockquote cite {
   .copy-grid {
     grid-column: 1;
     grid-template-columns: 1fr;
-  }
-
-  .share-stat,
-  .share-copy {
-    padding-right: var(--gutter);
-    padding-left: var(--gutter);
-  }
-
-  .share-stat {
-    min-height: 21rem;
   }
 
   .tool-item {
