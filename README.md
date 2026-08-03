@@ -1,38 +1,47 @@
-# norm2026
+# NORM website
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue and Vite website for NORM community workshop and studios.
 
-## Recommended IDE Setup
+## Development
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Install dependencies and start the local development server:
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Static hosting build
+
+Generate a static site with no server or worker runtime:
+
+```sh
+npm run build:static
+```
+
+The finished site is written to `dist/`. Upload the contents of that directory to any static web host.
+
+Because the site uses Vue Router, the host must serve `index.html` when a requested route does not match a physical file. This keeps direct visits to routes such as `/workshop`, `/studios`, and `/donate` working.
+
+## DigitalOcean App Platform
+
+Create a **Static Site** component with these settings:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build:static` |
+| Output directory | `dist` |
+| Index document | `index.html` |
+| Catch-all document | `index.html` |
+
+The catch-all document is required for the client-side routes. No run command is needed.
+
+## Sites-compatible build
+
+The default production build also adds the worker entry point used by Sites:
 
 ```sh
 npm run build
 ```
+
+Use `npm run build:static` when deploying to DigitalOcean App Platform or another conventional static host.
