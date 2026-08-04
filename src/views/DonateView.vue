@@ -40,7 +40,7 @@
           community of makers.
         </p>
         <a class="button button-orange" href="mailto:info@normwarehouse.com.au?subject=Donation%20to%20NORM">
-          Offer a donation <span aria-hidden="true">↗</span>
+          Offer a donation <span class="line-arrow" aria-hidden="true"></span>
         </a>
       </div>
     </section>

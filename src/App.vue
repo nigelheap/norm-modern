@@ -58,7 +58,7 @@ onUnmounted(() => {
           aria-label="NORM on Facebook"
         ><BrandIcon :path="siFacebook.path" /></a>
         <RouterLink class="header-cta" to="/contact">
-          Contact <span aria-hidden="true">↗</span>
+          Contact <span class="line-arrow" aria-hidden="true"></span>
         </RouterLink>
       </div>
 
@@ -123,12 +123,14 @@ onUnmounted(() => {
       </RouterLink>
       <p>Non-profit · Volunteer run · Melbourne made</p>
       <div class="footer-actions">
-        <RouterLink to="/contact">Drop us a email ↗</RouterLink>
+        <RouterLink to="/contact">
+          Drop us a email <span class="line-arrow" aria-hidden="true"></span>
+        </RouterLink>
         <a href="https://www.instagram.com/normworkshop" target="_blank" rel="noopener">
-          Instagram ↗
+          Instagram <span class="line-arrow" aria-hidden="true"></span>
         </a>
         <a href="https://www.facebook.com/meetnorm" target="_blank" rel="noopener">
-          Facebook ↗
+          Facebook <span class="line-arrow" aria-hidden="true"></span>
         </a>
       </div>
     </footer>

@@ -10,10 +10,10 @@
         </p>
         <div class="hero-actions">
           <RouterLink class="button button-dark" to="/workshop">
-            Explore the workshop <span>↗</span>
+            Explore the workshop <span class="line-arrow" aria-hidden="true"></span>
           </RouterLink>
           <RouterLink class="text-link" to="/contact">
-            Come say hello <span aria-hidden="true">↗</span>
+            Come say hello <span class="line-arrow" aria-hidden="true"></span>
           </RouterLink>
         </div>
       </div>
@@ -53,7 +53,9 @@
             tools. Work independently, collaborate freely and become part of a generous creative
             community.
           </p>
-          <RouterLink class="text-link" to="/about">More about NORM <span>↗</span></RouterLink>
+          <RouterLink class="text-link" to="/about">
+            More about NORM <span class="line-arrow" aria-hidden="true"></span>
+          </RouterLink>
         </div>
       </div>
     </section>
@@ -66,21 +68,21 @@
             <h2>Workshop</h2>
             <p>Woodwork, metalwork, bench space and a diverse community of practical skills.</p>
           </div>
-          <i aria-hidden="true">↗</i>
+          <i class="line-arrow" aria-hidden="true"></i>
         </RouterLink>
         <RouterLink class="route-card" to="/studios">
           <div>
             <h2>Studios</h2>
             <p>Lockable and shared spaces with workshop access, utilities and room to grow.</p>
           </div>
-          <i aria-hidden="true">↗</i>
+          <i class="line-arrow" aria-hidden="true"></i>
         </RouterLink>
         <RouterLink class="route-card" to="/donate">
           <div>
             <h2>Donate</h2>
             <p>Give useful tools and materials a new life in the hands of local makers.</p>
           </div>
-          <i aria-hidden="true">↗</i>
+          <i class="line-arrow" aria-hidden="true"></i>
         </RouterLink>
       </div>
     </section>
@@ -88,7 +90,9 @@
     <section class="home-closing" aria-labelledby="home-closing-title">
       <p class="eyebrow eyebrow-light"><span></span> Shared tools · Shared knowledge</p>
       <h2 id="home-closing-title">Access is superior to ownership.</h2>
-      <RouterLink class="button button-orange" to="/about">Why we share <span>↗</span></RouterLink>
+      <RouterLink class="button button-orange" to="/about">
+        Why we share <span class="line-arrow" aria-hidden="true"></span>
+      </RouterLink>
     </section>
   </div>
 </template>

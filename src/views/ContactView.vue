@@ -16,7 +16,7 @@
         <a class="contact-card" href="mailto:info@normwarehouse.com.au">
           <span>Email</span>
           <strong>info@normwarehouse.com.au</strong>
-          <i aria-hidden="true">↗</i>
+          <i class="line-arrow" aria-hidden="true"></i>
         </a>
         <a
           class="contact-card"
@@ -26,7 +26,7 @@
         >
           <span>Find us</span>
           <strong>14 Lewis Street<br />Coburg North, VIC 3058</strong>
-          <i aria-hidden="true">↗</i>
+          <i class="line-arrow" aria-hidden="true"></i>
         </a>
       </div>
     </section>

@@ -63,7 +63,7 @@ const memberships = [
             alt="Ground and mezzanine floor plans of the NORM warehouse"
             loading="lazy"
           />
-          <span>Open floor plan ↗</span>
+          <span>Open floor plan <i class="line-arrow" aria-hidden="true"></i></span>
         </a>
       </div>
 
@@ -89,7 +89,7 @@ const memberships = [
         <h2 id="studio-cta-title">Tell us what you need from a studio.</h2>
       </div>
       <a class="button button-dark" href="mailto:info@normwarehouse.com.au?subject=Studio%20enquiry">
-        Ask about studios <span aria-hidden="true">↗</span>
+        Ask about studios <span class="line-arrow" aria-hidden="true"></span>
       </a>
     </section>
   </div>

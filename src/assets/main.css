@@ -61,6 +61,38 @@ select {
   outline-offset: 4px;
 }
 
+.line-arrow {
+  position: relative;
+  width: 0.9em;
+  height: 0.9em;
+  flex: 0 0 auto;
+  display: inline-block;
+  vertical-align: -0.08em;
+}
+
+.line-arrow::before {
+  position: absolute;
+  top: 0.44em;
+  left: 0.02em;
+  width: 0.9em;
+  height: 1.5px;
+  background: currentColor;
+  content: "";
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+.line-arrow::after {
+  position: absolute;
+  top: 0.04em;
+  right: 0.02em;
+  width: 0.42em;
+  height: 0.42em;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  content: "";
+}
+
 .site-shell {
   overflow: clip;
 }
@@ -674,7 +706,7 @@ select {
   width: 100%;
 }
 
-.floorplan-image span {
+.floorplan-image > span {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -685,6 +717,10 @@ select {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.floorplan-image .line-arrow {
+  margin-left: 0.35rem;
 }
 
 .membership-list {

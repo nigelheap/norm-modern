@@ -89,7 +89,7 @@ const workshopImages = [
           are available separately.
         </p>
         <a class="button button-light" href="mailto:info@normwarehouse.com.au?subject=Safety%20induction%20enquiry">
-          Email about induction <span aria-hidden="true">↗</span>
+          Email about induction <span class="line-arrow" aria-hidden="true"></span>
         </a>
       </div>
 
@@ -143,7 +143,7 @@ const workshopImages = [
         <h2 id="workshop-cta-title">Email us and tell us what you want to make.</h2>
       </div>
       <a class="button button-dark" href="mailto:info@normwarehouse.com.au?subject=Workshop%20access%20enquiry">
-        Start an email <span aria-hidden="true">↗</span>
+        Start an email <span class="line-arrow" aria-hidden="true"></span>
       </a>
     </section>
   </div>
