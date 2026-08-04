@@ -497,6 +497,65 @@ select {
   margin-top: 2rem;
 }
 
+.workshop-gallery {
+  padding: var(--section-space) var(--gutter);
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.gallery-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.65fr);
+  gap: clamp(3rem, 9vw, 9rem);
+  align-items: end;
+}
+
+.gallery-heading h2 {
+  max-width: 10ch;
+  margin: 0;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.gallery-heading > p {
+  max-width: 34rem;
+  margin: 0;
+  color: rgba(243, 240, 232, 0.68);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.workshop-masonry {
+  column-count: 3;
+  column-gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  margin-top: clamp(4rem, 9vw, 8rem);
+}
+
+.workshop-photo {
+  position: relative;
+  margin: 0 0 clamp(0.75rem, 1.5vw, 1.25rem);
+  overflow: hidden;
+  break-inside: avoid;
+  background: #242421;
+}
+
+.workshop-photo a {
+  display: block;
+}
+
+.workshop-photo img {
+  width: 100%;
+  height: auto;
+  transition: transform 350ms ease, filter 350ms ease;
+}
+
+.workshop-photo:hover img {
+  filter: contrast(1.04) saturate(1.04);
+  transform: scale(1.018);
+}
+
 .classes-row > p {
   flex: 0 0 auto;
   margin: 0;
@@ -1124,6 +1183,14 @@ select {
     min-height: auto;
   }
 
+  .gallery-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-masonry {
+    column-count: 2;
+  }
+
   .page-intro {
     max-width: 38rem;
   }
@@ -1180,6 +1247,10 @@ select {
 @media (max-width: 620px) {
   .contact-page {
     min-height: auto;
+  }
+
+  .workshop-masonry {
+    column-count: 1;
   }
 
   .site-header {

@@ -21,6 +21,30 @@ const workshopTools = [
     text: 'A community with diverse skills and a peer-to-peer approach to learning.',
   },
 ]
+
+const workshopImages = [
+  { file: 'DSCF0657.jpeg', width: 854, height: 1280, alt: 'Entrance to the NORM warehouse workshop' },
+  { file: 'DSCF0658.jpeg', width: 1280, height: 854, alt: 'Outdoor courtyard with plants and shared seating' },
+  { file: 'DSCF0659.jpeg', width: 1280, height: 854, alt: 'Communal kitchen booth and timber table' },
+  { file: 'DSCF0662.jpeg', width: 1280, height: 854, alt: 'Workshop safety sign and hearing protection' },
+  { file: 'DSCF0664.jpeg', width: 854, height: 1280, alt: 'Bandsaw in the woodworking area' },
+  { file: 'DSCF0666.jpeg', width: 1280, height: 854, alt: 'Woodworking machine beside a workshop ladder' },
+  { file: 'DSCF0675.jpeg', width: 854, height: 1280, alt: 'Woodfast thicknesser in the workshop' },
+  { file: 'DSCF0676.jpeg', width: 854, height: 1280, alt: 'Workshop machine and dust extraction hose' },
+  { file: 'DSCF0679.jpeg', width: 1280, height: 854, alt: 'Table saw and tool wall' },
+  { file: 'DSCF0681.jpeg', width: 1280, height: 854, alt: 'Belt sander ready for use' },
+  { file: 'DSCF0683.jpeg', width: 854, height: 1280, alt: 'Drill press with a timber work surface' },
+  { file: 'DSCF0686.jpeg', width: 1280, height: 854, alt: 'Hand tools arranged above a workshop bench' },
+  { file: 'DSCF0688.jpeg', width: 1280, height: 854, alt: 'Welding equipment beside a metal workbench' },
+  { file: 'DSCF0691.jpeg', width: 1280, height: 854, alt: 'Wide view across the workshop machinery' },
+  { file: 'DSCF0692.jpeg', width: 1280, height: 854, alt: 'Shared workbenches in the main workshop' },
+  { file: 'DSCF0694.jpeg', width: 1280, height: 854, alt: 'Blue bench vise fixed to a timber workbench' },
+  { file: 'DSCF0696.jpeg', width: 1280, height: 854, alt: 'Large timber benches in the woodworking space' },
+  { file: 'DSCF0698.jpeg', width: 1280, height: 854, alt: 'Workshop tables surrounded by timber storage' },
+  { file: 'DSCF0700.jpeg', width: 1280, height: 854, alt: 'Dust extractors stored beneath a workshop bench' },
+  { file: 'DSCF0702.jpeg', width: 1280, height: 854, alt: 'NORM communal lounge and kitchen' },
+  { file: 'DSCF0704.jpeg', width: 854, height: 1280, alt: 'Passage between workshop and shared spaces' },
+]
 </script>
 
 <template>
@@ -75,6 +99,39 @@ const workshopTools = [
           <span>Basic tool use</span>
           <span>And more</span>
         </div>
+      </div>
+    </section>
+
+    <section class="workshop-gallery" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <p class="eyebrow eyebrow-light"><span></span> Around the warehouse</p>
+          <h2 id="gallery-title">A working space, not a showroom.</h2>
+        </div>
+        <p>
+          Machines, benches, shared rooms and the quiet corners between projects — this is where
+          the work happens.
+        </p>
+      </div>
+
+      <div class="workshop-masonry">
+        <figure v-for="image in workshopImages" :key="image.file" class="workshop-photo">
+          <a
+            :href="`/workshop-images/${image.file}`"
+            target="_blank"
+            rel="noopener"
+            :aria-label="`Open full-size photo: ${image.alt}`"
+          >
+            <img
+              :src="`/workshop-images/${image.file}`"
+              :alt="image.alt"
+              :width="image.width"
+              :height="image.height"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </figure>
       </div>
     </section>
 
