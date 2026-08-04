@@ -82,26 +82,28 @@ onUnmounted(() => {
         <RouterLink to="/workshop">Workshop</RouterLink>
         <RouterLink to="/studios">Studios</RouterLink>
         <RouterLink to="/donate">Donate</RouterLink>
-        <div class="mobile-contact-row">
-          <a
-            class="mobile-social-icon"
-            href="https://www.instagram.com/normworkshop"
-            target="_blank"
-            rel="noopener"
-            aria-label="NORM on Instagram"
-          >
-            <BrandIcon :path="siInstagram.path" />
-          </a>
-          <a
-            class="mobile-social-icon"
-            href="https://www.facebook.com/meetnorm"
-            target="_blank"
-            rel="noopener"
-            aria-label="NORM on Facebook"
-          >
-            <BrandIcon :path="siFacebook.path" />
-          </a>
+        <div class="mobile-contact-group">
           <RouterLink class="mobile-contact-link" to="/contact">Contact</RouterLink>
+          <div class="mobile-social-row">
+            <a
+              class="mobile-social-icon"
+              href="https://www.instagram.com/normworkshop"
+              target="_blank"
+              rel="noopener"
+              aria-label="NORM on Instagram"
+            >
+              <BrandIcon :path="siInstagram.path" />
+            </a>
+            <a
+              class="mobile-social-icon"
+              href="https://www.facebook.com/meetnorm"
+              target="_blank"
+              rel="noopener"
+              aria-label="NORM on Facebook"
+            >
+              <BrandIcon :path="siFacebook.path" />
+            </a>
+          </div>
         </div>
         <a class="mobile-email" href="mailto:info@normwarehouse.com.au">
           info@normwarehouse.com.au
