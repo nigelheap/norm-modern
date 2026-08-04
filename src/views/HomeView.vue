@@ -18,15 +18,29 @@
         </div>
       </div>
 
-      <aside class="hero-panel" aria-label="NORM at a glance">
-        <p class="panel-kicker">What’s inside</p>
-        <ul>
-          <li><span>Workshop</span><strong>Wood + metal</strong></li>
-          <li><span>Studios</span><strong>13 lockable spaces</strong></li>
-          <li><span>Access</span><strong>24 hours</strong></li>
-        </ul>
-        <p class="panel-note">Non-profit. Volunteer run. Built to be shared.</p>
-      </aside>
+      <div class="hero-visual">
+        <figure class="hero-image">
+          <img
+            src="/home-hero.webp"
+            width="1600"
+            height="1067"
+            alt="A red woodworking vice mounted to a timber workbench inside the NORM workshop"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <figcaption>NORM workshop / Coburg North</figcaption>
+        </figure>
+
+        <aside class="hero-panel" aria-label="NORM at a glance">
+          <p class="panel-kicker">What’s inside</p>
+          <ul>
+            <li><span>Workshop</span><strong>Wood + metal</strong></li>
+            <li><span>Studios</span><strong>13 lockable spaces</strong></li>
+            <li><span>Access</span><strong>24 hours</strong></li>
+          </ul>
+          <p class="panel-note">Non-profit. Volunteer run. Built to be shared.</p>
+        </aside>
+      </div>
     </section>
 
     <section class="section home-intro" aria-labelledby="home-intro-title">
@@ -48,7 +62,6 @@
       <p id="explore-title" class="section-label">Explore the warehouse</p>
       <div class="route-cards">
         <RouterLink class="route-card" to="/workshop">
-          <span class="route-number">01</span>
           <div>
             <h2>Workshop</h2>
             <p>Woodwork, metalwork, bench space and a diverse community of practical skills.</p>
@@ -56,7 +69,6 @@
           <i aria-hidden="true">↗</i>
         </RouterLink>
         <RouterLink class="route-card" to="/studios">
-          <span class="route-number">02</span>
           <div>
             <h2>Studios</h2>
             <p>Lockable and shared spaces with workshop access, utilities and room to grow.</p>
@@ -64,7 +76,6 @@
           <i aria-hidden="true">↗</i>
         </RouterLink>
         <RouterLink class="route-card" to="/donate">
-          <span class="route-number">03</span>
           <div>
             <h2>Donate</h2>
             <p>Give useful tools and materials a new life in the hands of local makers.</p>

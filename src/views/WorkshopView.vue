@@ -44,6 +44,8 @@ const workshopImages = [
   { file: 'DSCF0700.jpeg', width: 1280, height: 854, alt: 'Dust extractors stored beneath a workshop bench' },
   { file: 'DSCF0702.jpeg', width: 1280, height: 854, alt: 'NORM communal lounge and kitchen' },
   { file: 'DSCF0704.jpeg', width: 854, height: 1280, alt: 'Passage between workshop and shared spaces' },
+  { file: 'DSCF0689.jpeg', width: 854, height: 1280, alt: 'metal bay' },
+  { file: 'DSCF0693.jpeg', width: 854, height: 1280, alt: 'bench with vice' },
 ]
 </script>
 
