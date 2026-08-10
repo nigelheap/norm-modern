@@ -72,7 +72,6 @@ const workshopImages = [
 
       <div class="tool-list">
         <article v-for="tool in workshopTools" :key="tool.title" class="tool-item">
-          <span class="tool-number">{{ tool.number }}</span>
           <h3>{{ tool.title }}</h3>
           <p>{{ tool.text }}</p>
         </article>

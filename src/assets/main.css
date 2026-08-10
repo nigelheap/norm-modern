@@ -476,7 +476,7 @@ select {
 
 .tool-item {
   display: grid;
-  grid-template-columns: 4rem minmax(12rem, 0.7fr) 1fr;
+  grid-template-columns: minmax(12rem, 0.7fr) 1fr;
   gap: 2rem;
   align-items: start;
   padding: 1.75rem 0;
@@ -1385,7 +1385,7 @@ select {
   }
 
   .tool-item {
-    grid-template-columns: 2.5rem 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
