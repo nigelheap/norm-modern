@@ -1389,9 +1389,6 @@ select {
     gap: 1rem;
   }
 
-  .tool-item p {
-    grid-column: 2;
-  }
 
   .induction-panel {
     grid-template-columns: 1fr;
