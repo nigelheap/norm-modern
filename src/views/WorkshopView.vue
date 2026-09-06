@@ -1,4 +1,6 @@
 <script setup>
+import { computed, nextTick, onUnmounted, ref } from 'vue'
+
 const workshopTools = [
   {
     number: '01',
@@ -47,6 +49,79 @@ const workshopImages = [
   { file: 'DSCF0689.jpeg', width: 854, height: 1280, alt: 'metal bay' },
   { file: 'DSCF0693.jpeg', width: 854, height: 1280, alt: 'bench with vice' },
 ]
+
+const carouselTrack = ref(null)
+const lightboxDialog = ref(null)
+const activeSlide = ref(0)
+const lightboxIndex = ref(0)
+const lightboxOpen = ref(false)
+const currentLightboxImage = computed(() => workshopImages[lightboxIndex.value])
+let carouselScrollFrame = null
+
+const normaliseIndex = (index) => (index + workshopImages.length) % workshopImages.length
+
+const moveCarousel = (index) => {
+  const nextIndex = normaliseIndex(index)
+  const track = carouselTrack.value
+  const slide = track?.children[nextIndex]
+
+  activeSlide.value = nextIndex
+  slide?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+}
+
+const updateActiveSlide = () => {
+  if (carouselScrollFrame) return
+
+  carouselScrollFrame = window.requestAnimationFrame(() => {
+    const track = carouselTrack.value
+    if (!track) {
+      carouselScrollFrame = null
+      return
+    }
+
+    const trackLeft = track.getBoundingClientRect().left
+    let closestIndex = 0
+    let closestDistance = Number.POSITIVE_INFINITY
+
+    Array.from(track.children).forEach((slide, index) => {
+      const distance = Math.abs(slide.getBoundingClientRect().left - trackLeft)
+      if (distance < closestDistance) {
+        closestDistance = distance
+        closestIndex = index
+      }
+    })
+
+    activeSlide.value = closestIndex
+    carouselScrollFrame = null
+  })
+}
+
+const openLightbox = async (index) => {
+  lightboxIndex.value = index
+  lightboxOpen.value = true
+  document.body.classList.add('lightbox-is-open')
+  await nextTick()
+  lightboxDialog.value?.showModal()
+}
+
+const closeLightbox = () => {
+  if (lightboxDialog.value?.open) lightboxDialog.value.close()
+  lightboxOpen.value = false
+  document.body.classList.remove('lightbox-is-open')
+}
+
+const moveLightbox = (direction) => {
+  lightboxIndex.value = normaliseIndex(lightboxIndex.value + direction)
+}
+
+const closeOnBackdrop = (event) => {
+  if (event.target === lightboxDialog.value) closeLightbox()
+}
+
+onUnmounted(() => {
+  if (carouselScrollFrame) window.cancelAnimationFrame(carouselScrollFrame)
+  document.body.classList.remove('lightbox-is-open')
+})
 </script>
 
 <template>
@@ -115,13 +190,29 @@ const workshopImages = [
         </p>
       </div>
 
-      <div class="workshop-masonry">
-        <figure v-for="image in workshopImages" :key="image.file" class="workshop-photo">
-          <a
-            :href="`/workshop-images/${image.file}`"
-            target="_blank"
-            rel="noopener"
-            :aria-label="`Open full-size photo: ${image.alt}`"
+      <div class="gallery-mobile-controls" aria-label="Carousel controls">
+        <p aria-live="polite">
+          <span>{{ String(activeSlide + 1).padStart(2, '0') }}</span>
+          / {{ String(workshopImages.length).padStart(2, '0') }}
+        </p>
+        <div>
+          <button type="button" @click="moveCarousel(activeSlide - 1)">Previous</button>
+          <button type="button" @click="moveCarousel(activeSlide + 1)">Next</button>
+        </div>
+      </div>
+
+      <div
+        ref="carouselTrack"
+        class="workshop-masonry"
+        aria-label="Workshop image gallery"
+        @scroll.passive="updateActiveSlide"
+      >
+        <figure v-for="(image, index) in workshopImages" :key="image.file" class="workshop-photo">
+          <button
+            class="workshop-photo-button"
+            type="button"
+            :aria-label="`Open photo ${index + 1} of ${workshopImages.length}: ${image.alt}`"
+            @click="openLightbox(index)"
           >
             <img
               :src="`/workshop-images/${image.file}`"
@@ -131,10 +222,48 @@ const workshopImages = [
               loading="lazy"
               decoding="async"
             />
-          </a>
+          </button>
         </figure>
       </div>
     </section>
+
+    <dialog
+      ref="lightboxDialog"
+      class="gallery-lightbox"
+      aria-label="Workshop photo viewer"
+      @close="closeLightbox"
+      @click="closeOnBackdrop"
+      @keydown.left.prevent="moveLightbox(-1)"
+      @keydown.right.prevent="moveLightbox(1)"
+    >
+      <div v-if="lightboxOpen" class="lightbox-shell">
+        <div class="lightbox-toolbar">
+          <p>
+            NORM workshop
+            <span>{{ String(lightboxIndex + 1).padStart(2, '0') }} / {{ workshopImages.length }}</span>
+          </p>
+          <button type="button" aria-label="Close photo viewer" @click="closeLightbox">Close</button>
+        </div>
+
+        <div class="lightbox-stage">
+          <button type="button" aria-label="View previous photo" @click="moveLightbox(-1)">
+            Previous
+          </button>
+          <figure>
+            <img
+              :src="`/workshop-images/${currentLightboxImage.file}`"
+              :alt="currentLightboxImage.alt"
+              :width="currentLightboxImage.width"
+              :height="currentLightboxImage.height"
+            />
+            <figcaption>{{ currentLightboxImage.alt }}</figcaption>
+          </figure>
+          <button type="button" aria-label="View next photo" @click="moveLightbox(1)">
+            Next
+          </button>
+        </div>
+      </div>
+    </dialog>
 
     <section class="page-cta" aria-labelledby="workshop-cta-title">
       <div>
