@@ -1199,6 +1199,12 @@ select {
   background: var(--paper);
 }
 
+.contact-page .contact-card:hover,
+.contact-page .contact-card:focus-visible {
+  color: var(--paper);
+  background: var(--ink);
+}
+
 @media (max-width: 900px) {
   .desktop-nav,
   .header-actions {
