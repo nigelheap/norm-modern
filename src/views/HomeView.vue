@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero hero-banner hero-home" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span></span> Community workshop · Coburg North</p>
         <h1 id="hero-title">Make space for what you want to make.</h1>
@@ -19,18 +19,6 @@
       </div>
 
       <div class="hero-visual">
-        <figure class="hero-image">
-          <img
-            src="/home-hero.webp"
-            width="1600"
-            height="1067"
-            alt="A red woodworking vice mounted to a timber workbench inside the NORM workshop"
-            decoding="async"
-            fetchpriority="high"
-          />
-          <figcaption>NORM workshop / Coburg North</figcaption>
-        </figure>
-
         <aside class="hero-panel" aria-label="NORM at a glance">
           <p class="panel-kicker">What’s inside</p>
           <ul>

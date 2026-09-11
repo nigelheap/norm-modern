@@ -126,7 +126,10 @@ onUnmounted(() => {
 
 <template>
   <div>
-    <section class="page-hero page-hero-dark" aria-labelledby="workshop-page-title">
+    <section
+      class="page-hero page-hero-dark page-hero-banner page-hero-workshop"
+      aria-labelledby="workshop-page-title"
+    >
       <p class="eyebrow eyebrow-light"><span></span> Workshop access</p>
       <h1 id="workshop-page-title">Got projects but limited space and tools?</h1>
       <p class="page-intro">

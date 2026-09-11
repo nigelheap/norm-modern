@@ -1,6 +1,9 @@
 <template>
   <div>
-    <section class="page-hero page-hero-orange" aria-labelledby="donate-page-title">
+    <section
+      class="page-hero page-hero-orange page-hero-banner page-hero-donate"
+      aria-labelledby="donate-page-title"
+    >
       <p class="eyebrow"><span></span> Donate</p>
       <h1 id="donate-page-title">Useful things deserve another life.</h1>
       <p class="page-intro">

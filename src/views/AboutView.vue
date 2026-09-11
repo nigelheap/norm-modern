@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="page-hero" aria-labelledby="about-page-title">
+    <section class="page-hero page-hero-banner page-hero-about" aria-labelledby="about-page-title">
       <p class="eyebrow"><span></span> About NORM</p>
       <h1 id="about-page-title">More than a place to keep your tools.</h1>
       <p class="page-intro">

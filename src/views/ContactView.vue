@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="page-hero" aria-labelledby="contact-page-title">
+    <section class="page-hero page-hero-banner page-hero-contact" aria-labelledby="contact-page-title">
       <p class="eyebrow"><span></span> Contact</p>
       <h1 id="contact-page-title">Drop us a email.</h1>
       <p class="page-intro">
