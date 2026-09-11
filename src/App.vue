@@ -120,10 +120,16 @@ onUnmounted(() => {
     </main>
 
     <footer class="site-footer">
+      <p class="footer-acknowledgement">
+        Norm Warehouse acknowledges the Wurundjeri Woi-wurrung people of the Kulin Nation as the
+        Traditional custodians of the land on which our workshop is located and on which our
+        members create. We pay respect to their Elders past, present, and emerging, as well as to
+        all First Nations’ communities who significantly contribute to the life of the area.
+      </p>
       <RouterLink class="footer-logo" to="/" aria-label="NORM home">
         <img src="/norm-logo.png" alt="NORM" />
       </RouterLink>
-      <p>Non-profit · Volunteer run · Melbourne made</p>
+      <p class="footer-tagline">Non-profit · Volunteer run · Melbourne made</p>
       <div class="footer-actions">
         <RouterLink to="/contact">
           Drop us a email <span class="line-arrow" aria-hidden="true"></span>

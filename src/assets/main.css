@@ -123,7 +123,7 @@ select {
 .desktop-nav a,
 .header-cta,
 .site-footer a,
-.site-footer p {
+.footer-tagline {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1017,7 +1017,19 @@ select {
   background: #000;
 }
 
-.site-footer p {
+.footer-acknowledgement {
+  grid-column: 1 / -1;
+  max-width: 78ch;
+  margin: 0;
+  padding-bottom: 2rem;
+  color: rgba(243, 240, 232, 0.72);
+  border-bottom: 1px solid rgba(243, 240, 232, 0.22);
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.footer-tagline {
   margin: 0;
   color: rgba(243, 240, 232, 0.5);
   text-align: center;
@@ -1723,7 +1735,7 @@ select {
     grid-template-columns: 1fr auto;
   }
 
-  .site-footer p {
+  .footer-tagline {
     display: none;
   }
 
