@@ -448,15 +448,7 @@ select {
   text-transform: uppercase;
 }
 
-.about-section {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 0 var(--gutter);
-}
 
-.about-section .section-label {
-  grid-column: 1 / -1;
-}
 
 .about-heading {
   grid-column: 1 / -1;
@@ -1063,7 +1055,7 @@ select {
   min-height: 72svh;
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(17rem, 0.55fr);
-  gap: clamp(3rem, 8vw, 8rem);
+  gap: clamp(3rem, 6vw, 8rem);
   align-items: end;
   padding: clamp(10rem, 19vh, 14rem) var(--gutter) clamp(4rem, 8vw, 7rem);
   border-bottom: 1px solid var(--line);
@@ -1662,9 +1654,6 @@ select {
     display: block;
   }
 
-  .about-section {
-    grid-template-columns: 1fr;
-  }
 
   .copy-grid {
     grid-column: 1;

@@ -3,10 +3,6 @@
     <section class="page-hero page-hero-banner page-hero-about" aria-labelledby="about-page-title">
       <p class="eyebrow"><span></span> About NORM</p>
       <h1 id="about-page-title">Norm Warehouse is a workshop, studio and shared creative space.</h1>
-      <p class="page-intro">
-        A volunteer-run warehouse where makers, tinkerers and artists can complete projects,
-        learn new skills and pass on knowledge.
-      </p>
     </section>
 
     <section class="section about-section" aria-labelledby="about-title">
