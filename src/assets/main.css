@@ -303,13 +303,13 @@ select {
 .donate-copy h2,
 .contact-section h2 {
   margin: 0;
-  font-size: clamp(3.5rem, 8.5vw, 7.5rem);
+  font-size: clamp(3.5rem, 4.5vw, 4rem);
   font-weight: 600;
 }
 
 .hero h1 {
-  max-width: 11ch;
-  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  max-width: 16ch;
+  font-size: clamp(2.75rem, 4vw, 5.5rem);
 }
 
 .hero-intro {
@@ -1119,9 +1119,6 @@ select {
   padding-top: clamp(3rem, 7vw, 6rem);
 }
 
-.home-intro-grid h2 {
-  max-width: 10ch;
-}
 
 .home-intro-grid p {
   margin: 0 0 2rem;
