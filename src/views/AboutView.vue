@@ -4,6 +4,10 @@
       <div class="page-hero-content">
         <p class="eyebrow"><span></span> About NORM</p>
         <h1 id="about-page-title">Norm Warehouse is a workshop, studio and shared creative space.</h1>
+        <p class="page-intro">
+          An inclusive, volunteer-run place for makers, designers and artists to complete projects,
+          learn new skills and pass on knowledge.
+        </p>
       </div>
     </section>
 

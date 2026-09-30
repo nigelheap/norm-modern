@@ -1,10 +1,10 @@
 :root {
-  --ink: #11110f;
-  --paper: #f3f0e8;
-  --paper-deep: #e7e1d5;
-  --orange: #ff5a1f;
-  --line: rgba(17, 17, 15, 0.22);
-  --muted: #67645d;
+  --ink: #151312;
+  --paper: #f8f8f8;
+  --paper-deep: #d9d9d9;
+  --orange: #e0716b;
+  --line: rgba(21, 19, 18, 0.24);
+  --muted: #5e5e5e;
   --gutter: clamp(1.25rem, 4vw, 4.5rem);
   --section-space: clamp(5rem, 10vw, 9rem);
 }
@@ -95,7 +95,7 @@ select {
   gap: 2rem;
   padding: 0 var(--gutter);
   border-bottom: 1px solid var(--line);
-  background: rgba(243, 240, 232, 0.92);
+  background: rgba(248, 248, 248, 0.92);
   backdrop-filter: blur(14px);
 }
 
@@ -305,12 +305,11 @@ select {
   margin: 0;
   font-size: clamp(3.5rem, 8.5vw, 7.5rem);
   font-weight: 600;
-  letter-spacing: 0;
-  line-height: 0.95;
 }
 
 .hero h1 {
   max-width: 11ch;
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
 }
 
 .hero-intro {
@@ -465,8 +464,8 @@ select {
 }
 
 .donate-copy h2 {
-  max-width: 11ch;
-  font-size: clamp(3rem, 6.2vw, 7rem);
+  max-width: 15ch;
+  font-size: clamp(3rem, 4.2vw, 5rem);
 }
 
 .donate-detail > p {
@@ -1047,12 +1046,11 @@ select {
 }
 
 .page-hero-content {
-  width: min(100%, 90rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(17rem, 0.55fr);
-  column-gap: clamp(3rem, 6vw, 8rem);
-  row-gap: clamp(2rem, 4vw, 4rem);
-  align-items: end;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   padding: clamp(1.5rem, 4vw, 4rem);
   color: var(--ink);
   border: 3px solid var(--ink);
@@ -1060,17 +1058,14 @@ select {
 }
 
 .page-hero-content .eyebrow {
-  grid-column: 1 / -1;
   margin-bottom: 0;
 }
 
 .page-hero h1 {
-  max-width: 11ch;
+  max-width: 16ch;
   margin: 0;
-  font-size: clamp(4rem, 8.5vw, 7rem);
+  font-size: clamp(2.75rem, 4vw, 4rem);
   font-weight: 600;
-  letter-spacing: 0em;
-  line-height: 0.95;
 }
 
 .page-intro {
@@ -1418,7 +1413,7 @@ select {
   }
 
   .page-hero-content {
-    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .gallery-heading {
