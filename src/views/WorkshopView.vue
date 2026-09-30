@@ -130,12 +130,14 @@ onUnmounted(() => {
       class="page-hero page-hero-dark page-hero-banner page-hero-workshop"
       aria-labelledby="workshop-page-title"
     >
-      <p class="eyebrow eyebrow-light"><span></span> Workshop access</p>
-      <h1 id="workshop-page-title">Got projects but limited space and tools?</h1>
-      <p class="page-intro">
-        A fully equipped community workshop for woodwork, metalwork and the ideas that need more
-        room than home can offer.
-      </p>
+      <div class="page-hero-content">
+        <p class="eyebrow"><span></span> Workshop access</p>
+        <h1 id="workshop-page-title">Got projects but limited space and tools?</h1>
+        <p class="page-intro">
+          A fully equipped community workshop for woodwork, metalwork and the ideas that need more
+          room than home can offer.
+        </p>
+      </div>
     </section>
 
     <section class="section workshop-section" aria-labelledby="equipment-title">

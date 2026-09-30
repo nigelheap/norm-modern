@@ -4,12 +4,14 @@
       class="page-hero page-hero-orange page-hero-banner page-hero-donate"
       aria-labelledby="donate-page-title"
     >
-      <p class="eyebrow"><span></span> Donate</p>
-      <h1 id="donate-page-title">Useful things deserve another life.</h1>
-      <p class="page-intro">
-        Put idle tools, equipment and materials back to work in the hands of NORM’s community of
-        makers.
-      </p>
+      <div class="page-hero-content">
+        <p class="eyebrow"><span></span> Donate</p>
+        <h1 id="donate-page-title">Useful things deserve another life.</h1>
+        <p class="page-intro">
+          Put idle tools, equipment and materials back to work in the hands of NORM’s community of
+          makers.
+        </p>
+      </div>
     </section>
 
     <section class="section involvement-section" aria-labelledby="donation-title">

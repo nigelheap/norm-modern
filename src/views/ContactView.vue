@@ -1,12 +1,14 @@
 <template>
   <div>
     <section class="page-hero page-hero-banner page-hero-contact" aria-labelledby="contact-page-title">
-      <p class="eyebrow"><span></span> Contact</p>
-      <h1 id="contact-page-title">Drop us a email.</h1>
-      <p class="page-intro">
-        Ask about studios, workshop access, inductions, classes or donations. We’re always happy to
-        talk through what you want to make.
-      </p>
+      <div class="page-hero-content">
+        <p class="eyebrow"><span></span> Contact</p>
+        <h1 id="contact-page-title">Drop us a email.</h1>
+        <p class="page-intro">
+          Ask about studios, workshop access, inductions, classes or donations. We’re always happy to
+          talk through what you want to make.
+        </p>
+      </div>
     </section>
 
     <section class="contact-section contact-page" aria-labelledby="contact-options-title">

@@ -24,12 +24,14 @@ const memberships = [
 <template>
   <div>
     <section class="page-hero page-hero-banner page-hero-studios" aria-labelledby="studios-page-title">
-      <p class="eyebrow"><span></span> Studios</p>
-      <h1 id="studios-page-title">Your kitchen table deserves a break.</h1>
-      <p class="page-intro">
-        Studios from 13–24m² for furniture makers, designers, visual artists, engineers, animators,
-        sculptors and creatives of every description.
-      </p>
+      <div class="page-hero-content">
+        <p class="eyebrow"><span></span> Studios</p>
+        <h1 id="studios-page-title">Your kitchen table deserves a break.</h1>
+        <p class="page-intro">
+          Studios from 13–24m² for furniture makers, designers, visual artists, engineers, animators,
+          sculptors and creatives of every description.
+        </p>
+      </div>
     </section>
 
     <section class="section studios-section" aria-labelledby="studio-life-title">

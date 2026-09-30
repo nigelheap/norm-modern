@@ -1,8 +1,10 @@
 <template>
   <div>
     <section class="page-hero page-hero-banner page-hero-about" aria-labelledby="about-page-title">
-      <p class="eyebrow"><span></span> About NORM</p>
-      <h1 id="about-page-title">Norm Warehouse is a workshop, studio and shared creative space.</h1>
+      <div class="page-hero-content">
+        <p class="eyebrow"><span></span> About NORM</p>
+        <h1 id="about-page-title">Norm Warehouse is a workshop, studio and shared creative space.</h1>
+      </div>
     </section>
 
     <section class="section about-section" aria-labelledby="about-title">

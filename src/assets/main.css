@@ -217,36 +217,18 @@ select {
 .page-hero-banner {
   isolation: isolate;
   overflow: hidden;
-  color: var(--paper);
-  border-color: rgba(243, 240, 232, 0.24);
   background: var(--ink);
 }
 
 .hero-banner::before,
-.page-hero-banner::before,
-.hero-banner::after,
-.page-hero-banner::after {
+.page-hero-banner::before {
   position: absolute;
   inset: 0;
   content: "";
-}
-
-.hero-banner::before,
-.page-hero-banner::before {
-  z-index: -2;
+  z-index: -1;
   background-image: var(--hero-image);
   background-position: var(--hero-position, center);
   background-size: cover;
-  filter: saturate(0.8) contrast(1.06);
-  transform: scale(1.01);
-}
-
-.hero-banner::after,
-.page-hero-banner::after {
-  z-index: -1;
-  background:
-    linear-gradient(90deg, rgba(17, 17, 15, 0.94) 0%, rgba(17, 17, 15, 0.8) 48%, rgba(17, 17, 15, 0.42) 100%),
-    linear-gradient(0deg, rgba(17, 17, 15, 0.55), transparent 55%);
 }
 
 .hero-banner > *,
@@ -291,6 +273,10 @@ select {
 
 .hero-copy {
   max-width: 67rem;
+  padding: clamp(1.5rem, 3.5vw, 3.5rem);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  background: var(--paper);
 }
 
 .eyebrow {
@@ -1054,17 +1040,28 @@ select {
   position: relative;
   min-height: 72svh;
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(17rem, 0.55fr);
-  gap: clamp(3rem, 6vw, 8rem);
+  grid-template-columns: 1fr;
   align-items: end;
   padding: clamp(10rem, 19vh, 14rem) var(--gutter) clamp(4rem, 8vw, 7rem);
   border-bottom: 1px solid var(--line);
 }
 
-.page-hero .eyebrow {
+.page-hero-content {
+  width: min(100%, 90rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(17rem, 0.55fr);
+  column-gap: clamp(3rem, 6vw, 8rem);
+  row-gap: clamp(2rem, 4vw, 4rem);
+  align-items: end;
+  padding: clamp(1.5rem, 4vw, 4rem);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  background: var(--paper);
+}
+
+.page-hero-content .eyebrow {
   grid-column: 1 / -1;
-  align-self: start;
-  margin-bottom: auto;
+  margin-bottom: 0;
 }
 
 .page-hero h1 {
@@ -1096,7 +1093,7 @@ select {
 }
 
 .page-hero-banner .page-intro {
-  color: rgba(243, 240, 232, 0.8);
+  color: rgba(17, 17, 15, 0.76);
 }
 
 .page-hero-orange {
@@ -1107,10 +1104,8 @@ select {
   color: var(--ink);
 }
 
-.page-hero-orange.page-hero-banner::after {
-  background:
-    linear-gradient(90deg, rgba(255, 90, 31, 0.97) 0%, rgba(255, 90, 31, 0.86) 52%, rgba(255, 90, 31, 0.46) 100%),
-    linear-gradient(0deg, rgba(17, 17, 15, 0.18), transparent 55%);
+.page-hero-orange .page-hero-content {
+  background: var(--orange);
 }
 
 .page-hero-orange.page-hero-banner .page-intro {
@@ -1422,6 +1417,10 @@ select {
     min-height: auto;
   }
 
+  .page-hero-content {
+    grid-template-columns: 1fr;
+  }
+
   .gallery-heading {
     grid-template-columns: 1fr;
   }
@@ -1488,17 +1487,10 @@ select {
 }
 
 @media (max-width: 620px) {
-  .hero-banner::after,
-  .page-hero-banner::after {
-    background:
-      linear-gradient(0deg, rgba(17, 17, 15, 0.94) 0%, rgba(17, 17, 15, 0.72) 68%, rgba(17, 17, 15, 0.56) 100%),
-      linear-gradient(90deg, rgba(17, 17, 15, 0.72), rgba(17, 17, 15, 0.18));
-  }
-
-  .page-hero-orange.page-hero-banner::after {
-    background:
-      linear-gradient(0deg, rgba(255, 90, 31, 0.97) 0%, rgba(255, 90, 31, 0.84) 70%, rgba(255, 90, 31, 0.68) 100%),
-      linear-gradient(90deg, rgba(255, 90, 31, 0.72), rgba(255, 90, 31, 0.28));
+  .hero-copy,
+  .page-hero-content {
+    padding: 1.25rem;
+    border-width: 2px;
   }
 
   .contact-page {
