@@ -27,6 +27,16 @@ const router = createRouter({
       },
     },
     {
+      path: '/history',
+      name: 'history',
+      component: () => import('../views/HistoryView.vue'),
+      meta: {
+        title: 'History — NORM Warehouse',
+        description:
+          'Read how NORM grew from two friends sharing tools into an inclusive community workshop for local makers and artists.',
+      },
+    },
+    {
       path: '/workshop',
       name: 'workshop',
       component: () => import('../views/WorkshopView.vue'),
@@ -47,16 +57,37 @@ const router = createRouter({
       },
     },
     {
-      path: '/donate',
-      name: 'donate',
-      component: () => import('../views/DonateView.vue'),
+      path: '/members',
+      name: 'members',
+      component: () => import('../views/MembersView.vue'),
       meta: {
-        title: 'Donate — NORM',
+        title: 'Our members — NORM Warehouse',
         description:
-          'Donate useful tools, equipment and materials to NORM’s volunteer-run community of makers.',
+          'Meet the makers, artists and designers who make up the NORM Warehouse community.',
       },
     },
-    { path: '/get-involved', redirect: '/donate' },
+    {
+      path: '/join',
+      name: 'join',
+      component: () => import('../views/JoinView.vue'),
+      meta: {
+        title: 'Join NORM — Studios & workshop memberships',
+        description:
+          'Join NORM through a shared studio or workshop membership in Coburg North.',
+      },
+    },
+    {
+      path: '/get-something-made',
+      name: 'get-something-made',
+      component: () => import('../views/GetSomethingMadeView.vue'),
+      meta: {
+        title: 'Get something made — NORM Warehouse',
+        description:
+          'Tell NORM about your woodwork or metalwork project and connect with a skilled member.',
+      },
+    },
+    { path: '/donate', redirect: '/' },
+    { path: '/get-involved', redirect: '/' },
     {
       path: '/contact',
       name: 'contact',

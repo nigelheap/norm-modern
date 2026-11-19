@@ -37,9 +37,12 @@ onUnmounted(() => {
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/history">History</RouterLink>
         <RouterLink to="/workshop">Workshop</RouterLink>
         <RouterLink to="/studios">Studios</RouterLink>
-        <RouterLink to="/donate">Donate</RouterLink>
+        <RouterLink to="/members">Members</RouterLink>
+        <RouterLink to="/join">Join</RouterLink>
+        <RouterLink to="/get-something-made">Get something made</RouterLink>
       </nav>
 
       <div class="header-actions">
@@ -79,9 +82,12 @@ onUnmounted(() => {
     <Transition name="menu">
       <nav v-if="menuOpen" id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation">
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/history">History</RouterLink>
         <RouterLink to="/workshop">Workshop</RouterLink>
         <RouterLink to="/studios">Studios</RouterLink>
-        <RouterLink to="/donate">Donate</RouterLink>
+        <RouterLink to="/members">Members</RouterLink>
+        <RouterLink to="/join">Join</RouterLink>
+        <RouterLink to="/get-something-made">Get something made</RouterLink>
         <div class="mobile-contact-group">
           <RouterLink class="mobile-contact-link" to="/contact">Contact</RouterLink>
           <div class="mobile-social-row">
