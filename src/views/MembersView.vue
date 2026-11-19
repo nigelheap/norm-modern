@@ -18,7 +18,6 @@ const specialties = [
       aria-labelledby="members-page-title"
     >
       <div class="page-hero-content">
-        <p class="eyebrow"><span></span> NORM community</p>
         <h1 id="members-page-title">Our members</h1>
         <p class="page-intro">The makers, artists and designers who bring NORM to life.</p>
       </div>
@@ -34,8 +33,8 @@ const specialties = [
         </p>
       </div>
 
-      <div v-if="members.length" class="member-grid">
-        <article v-for="member in members" :key="member.name" class="member-card">
+      <div v-if="members.length" class="member-grid text-grid">
+        <article v-for="member in members" :key="member.name" class="member-card text-cell">
           <div class="member-card-image">
             <img :src="member.image" :alt="member.name" loading="lazy" />
           </div>
@@ -48,8 +47,8 @@ const specialties = [
         </article>
       </div>
 
-      <div v-else class="members-empty">
-        <div>
+      <div v-else class="members-empty text-grid">
+        <div class="text-cell">
           <p class="panel-kicker">Profiles coming soon</p>
           <h3>The directory is being assembled.</h3>
           <p>
@@ -57,7 +56,7 @@ const specialties = [
             site.
           </p>
         </div>
-        <ul aria-label="Member specialties">
+        <ul class="specialties-grid" aria-label="Member specialties">
           <li v-for="specialty in specialties" :key="specialty">{{ specialty }}</li>
         </ul>
       </div>
@@ -65,7 +64,6 @@ const specialties = [
 
     <section class="page-cta" aria-labelledby="members-cta-title">
       <div>
-        <p class="eyebrow"><span></span> Have a project?</p>
         <h2 id="members-cta-title">Find someone with the right skills.</h2>
       </div>
       <RouterLink class="button button-dark" to="/get-something-made">

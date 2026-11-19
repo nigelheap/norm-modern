@@ -25,7 +25,6 @@ const memberships = [
   <div>
     <section class="page-hero page-hero-banner page-hero-studios" aria-labelledby="studios-page-title">
       <div class="page-hero-content">
-        <p class="eyebrow"><span></span> Studios</p>
         <h1 id="studios-page-title">Your kitchen table deserves a break.</h1>
         <p class="page-intro">
           Studios from 13–24m² for furniture makers, designers, visual artists, engineers, animators,
@@ -69,8 +68,8 @@ const memberships = [
         </a>
       </div>
 
-      <div class="membership-list" aria-label="Membership options">
-        <article v-for="membership in memberships" :key="membership.name" class="membership-row">
+      <div class="membership-list text-grid" aria-label="Membership options">
+        <article v-for="membership in memberships" :key="membership.name" class="membership-row text-cell">
           <h3>{{ membership.name }}</h3>
           <p>{{ membership.detail }}</p>
           <div class="price">
@@ -87,7 +86,6 @@ const memberships = [
 
     <section class="page-cta" aria-labelledby="studio-cta-title">
       <div>
-        <p class="eyebrow"><span></span> Find your space</p>
         <h2 id="studio-cta-title">Tell us what you need from a studio.</h2>
       </div>
       <a class="button button-dark" href="mailto:info@normwarehouse.com.au?subject=Studio%20enquiry">

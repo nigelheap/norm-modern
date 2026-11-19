@@ -131,7 +131,6 @@ onUnmounted(() => {
       aria-labelledby="workshop-page-title"
     >
       <div class="page-hero-content">
-        <p class="eyebrow"><span></span> Workshop access</p>
         <h1 id="workshop-page-title">Got projects but limited space and tools?</h1>
         <p class="page-intro">
           A fully equipped community workshop for woodwork, metalwork and the ideas that need more
@@ -150,8 +149,8 @@ onUnmounted(() => {
         </p>
       </div>
 
-      <div class="tool-list">
-        <article v-for="tool in workshopTools" :key="tool.title" class="tool-item">
+      <div class="tool-list text-grid">
+        <article v-for="tool in workshopTools" :key="tool.title" class="tool-item text-cell">
           <h3>{{ tool.title }}</h3>
           <p>{{ tool.text }}</p>
         </article>
@@ -186,7 +185,6 @@ onUnmounted(() => {
     <section class="workshop-gallery" aria-labelledby="gallery-title">
       <div class="gallery-heading">
         <div>
-          <p class="eyebrow eyebrow-light"><span></span> Around the warehouse</p>
           <h2 id="gallery-title">A working space, not a showroom.</h2>
         </div>
         <p>
@@ -272,7 +270,6 @@ onUnmounted(() => {
 
     <section class="page-cta" aria-labelledby="workshop-cta-title">
       <div>
-        <p class="eyebrow"><span></span> Thinking about workshop access?</p>
         <h2 id="workshop-cta-title">Email us and tell us what you want to make.</h2>
       </div>
       <a class="button button-dark" href="mailto:info@normwarehouse.com.au?subject=Workshop%20access%20enquiry">

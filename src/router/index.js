@@ -16,16 +16,7 @@ const router = createRouter({
           'NORM is a volunteer-run community workshop, studio and shared creative space in Coburg North, Melbourne.',
       },
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue'),
-      meta: {
-        title: 'About NORM — Community workshop & studios',
-        description:
-          'Meet NORM, an inclusive, volunteer-run creative warehouse for making, learning and sharing in Coburg North.',
-      },
-    },
+    { path: '/about', redirect: '/' },
     {
       path: '/history',
       name: 'history',

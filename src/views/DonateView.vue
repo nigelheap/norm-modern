@@ -5,7 +5,6 @@
       aria-labelledby="donate-page-title"
     >
       <div class="page-hero-content">
-        <p class="eyebrow"><span></span> Donate</p>
         <h1 id="donate-page-title">Useful things deserve another life.</h1>
         <p class="page-intro">
           Put idle tools, equipment and materials back to work in the hands of NORM’s community of
@@ -36,7 +35,6 @@
 
     <section class="donate-section" aria-labelledby="offer-title">
       <div class="donate-copy">
-        <p class="eyebrow eyebrow-light"><span></span> Have something useful?</p>
         <h2 id="offer-title">Let’s keep it in circulation.</h2>
       </div>
       <div class="donate-detail">

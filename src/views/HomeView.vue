@@ -2,7 +2,6 @@
   <div>
     <section class="home-welcome" aria-labelledby="hero-title">
       <div class="welcome-copy">
-        <p class="eyebrow"><span></span> Community workshop · Coburg North</p>
         <h1 id="hero-title">Norm Warehouse</h1>
         <p class="welcome-tagline">Creative studios and communal workshop</p>
         <p>
@@ -84,28 +83,28 @@
 
     <section class="home-details" aria-labelledby="warehouse-title">
       <h2 id="warehouse-title">Inside NORM</h2>
-      <div class="home-details-grid">
-        <p>
-          The front half of the building has a communal lounge and kitchen, 13 lockable studios
-          plus shared space for projects. In the back half you’ll find a nice big workshop full of
-          professional wood and metal machinery, power tools, hand tools and material storage.
-        </p>
-        <div>
+      <div class="home-details-grid text-grid">
+        <article class="text-cell">
+          <h3>The space</h3>
+          <p>
+            The front half of the building has a communal lounge and kitchen, 13 lockable studios
+            plus shared space for projects. In the back half you’ll find a nice big workshop full of
+            professional wood and metal machinery, power tools, hand tools and material storage.
+          </p>
+        </article>
+        <article class="text-cell">
+          <h3>The people</h3>
           <p>
             Norm employs two workshop managers who maintain the machines in good working order and
             are available for assistance with using the equipment. As a registered Not-For-Profit,
             we also elect board members who oversee operations and decision-making.
           </p>
-          <RouterLink class="text-link" to="/about">
-            More about NORM <span class="line-arrow" aria-hidden="true"></span>
-          </RouterLink>
-        </div>
+        </article>
       </div>
     </section>
 
     <section class="home-closing" aria-labelledby="home-closing-title">
-      <p class="eyebrow"><span></span> Shared tools · Shared knowledge</p>
-      <h2 id="home-closing-title">Access is superior to ownership.</h2>
+      <h2 id="home-closing-title">How did this all get started?.</h2>
       <RouterLink class="text-link" to="/history">
         Our story <span class="line-arrow" aria-hidden="true"></span>
       </RouterLink>

@@ -299,24 +299,7 @@ select {
   background: var(--paper);
 }
 
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin: 0 0 2rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
 
-.eyebrow span {
-  width: 0.55rem;
-  height: 0.55rem;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background: var(--orange);
-}
 
 .hero h1,
 .section h2,
@@ -479,9 +462,6 @@ select {
   line-height: 1.65;
 }
 
-.eyebrow-light {
-  color: var(--paper);
-}
 
 .donate-copy h2 {
   max-width: 15ch;
@@ -945,9 +925,6 @@ select {
   background: var(--orange);
 }
 
-.contact-section .eyebrow span {
-  background: var(--ink);
-}
 
 .contact-section h2 {
   max-width: 11ch;
@@ -1077,9 +1054,6 @@ select {
   background: var(--paper);
 }
 
-.page-hero-content .eyebrow {
-  margin-bottom: 0;
-}
 
 .page-hero h1 {
   max-width: 16ch;
@@ -1127,9 +1101,6 @@ select {
   color: rgba(17, 17, 15, 0.78);
 }
 
-.page-hero-orange .eyebrow span {
-  background: var(--ink);
-}
 
 .home-intro-grid {
   display: grid;
@@ -1236,9 +1207,6 @@ select {
   background: var(--orange);
 }
 
-.page-cta .eyebrow span {
-  background: var(--ink);
-}
 
 .donation-list {
   display: grid;
@@ -1267,9 +1235,6 @@ select {
   background: var(--paper);
 }
 
-.contact-page .eyebrow span {
-  background: var(--orange);
-}
 
 .contact-page .contact-grid {
   border-color: var(--line);
@@ -1308,7 +1273,8 @@ select {
   max-width: 14ch;
 }
 
-.join-intro-grid p {
+.join-intro-grid p,
+.join-intro > p {
   max-width: 42rem;
   margin: 0;
   font-size: clamp(1rem, 1.3vw, 1.18rem);
@@ -1329,13 +1295,7 @@ select {
   background: var(--paper-deep);
 }
 
-.join-options-heading .eyebrow {
-  margin-bottom: clamp(2.5rem, 5vw, 5rem);
-}
 
-.join-options-heading .eyebrow span {
-  background: var(--ink);
-}
 
 .join-options-heading h2 {
   max-width: 13ch;
@@ -1429,7 +1389,7 @@ select {
   max-width: 11ch;
 }
 
-.join-inquiry-copy > p:not(.eyebrow) {
+.join-inquiry-copy > p {
   max-width: 38rem;
   margin: 2rem 0 0;
   line-height: 1.7;
@@ -1709,7 +1669,7 @@ select {
   background: var(--paper-deep);
 }
 
-.made-copy > p:not(.eyebrow) {
+.made-copy > p {
   max-width: 38rem;
   margin: 2rem 0 0;
   font-size: clamp(1rem, 1.3vw, 1.2rem);
@@ -2318,7 +2278,7 @@ select {
   line-height: 1;
 }
 
-.welcome-copy > p:not(.eyebrow) {
+.welcome-copy > p {
   max-width: 49ch;
   margin: 1.5rem 0 0;
   font-size: 1rem;
@@ -2333,11 +2293,6 @@ select {
   line-height: 1.3;
 }
 
-.eyebrow {
-  margin-bottom: 1.5rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-}
 
 .welcome-visual {
   min-width: 0;
@@ -2520,9 +2475,6 @@ select {
   background: var(--paper);
 }
 
-.home-closing .eyebrow {
-  margin: 0;
-}
 
 .home-closing h2 {
   max-width: none;
@@ -2634,8 +2586,9 @@ select {
 
 .copy-grid p,
 .join-intro-grid p,
+.join-intro > p,
 .members-heading > p,
-.made-copy > p:not(.eyebrow) {
+.made-copy > p {
   font-size: 1rem;
   line-height: 1.7;
 }
@@ -2728,9 +2681,6 @@ select {
   padding-bottom: 3rem;
 }
 
-.page-cta .eyebrow {
-  margin-bottom: 1rem;
-}
 
 .contact-page {
   min-height: 0;
@@ -2755,9 +2705,6 @@ select {
   background: transparent;
 }
 
-.join-options-heading .eyebrow {
-  margin-bottom: 1rem;
-}
 
 .join-option,
 .join-option + .join-option {
@@ -2785,31 +2732,79 @@ select {
 }
 
 .history-timeline {
+  --timeline-rail: clamp(8rem, 15vw, 12rem);
+  position: relative;
+  display: grid;
   margin-top: 3rem;
-  border-top: 1px solid var(--line);
+  margin-bottom: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
 }
 
-.history-entry,
-.history-entry-accent,
-.history-entry-dark {
-  grid-template-columns: 8rem minmax(0, 1fr);
+.history-timeline::before {
+  position: absolute;
+  top: 1.1rem;
+  bottom: 2.5rem;
+  left: var(--timeline-rail);
+  width: 1px;
+  background: var(--line);
+  content: "";
+}
+
+.history-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--timeline-rail) minmax(0, 1fr);
+  padding-bottom: 2.5rem;
   color: var(--ink);
   border: 0;
-  border-bottom: 1px solid var(--line);
   background: transparent;
 }
 
-.history-date,
-.history-entry-dark .history-date {
-  padding: 2rem 1rem 2rem 0;
-  color: var(--muted);
+.history-entry::before {
+  position: absolute;
+  top: 1.05rem;
+  left: calc(var(--timeline-rail) - 0.4rem);
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 3px solid var(--paper);
+  border-radius: 50%;
+  outline: 1px solid var(--orange);
+  background: var(--orange);
+  content: "";
+}
+
+.history-date {
+  margin: 0;
+  padding: 0.9rem 1.75rem 0 0;
+  color: var(--ink);
   border: 0;
+  font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.history-date span {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
 }
 
 .history-copy {
   grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
   gap: 2rem;
-  padding: 2rem 0;
+  margin-left: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--ink);
+  background: var(--paper);
 }
 
 .history-copy h3 {
@@ -2827,6 +2822,182 @@ select {
 
 .members-empty h3 {
   font-size: 1.7rem;
+}
+
+/* Shared text cells keep content aligned across all pages. */
+.text-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.text-grid > .text-cell {
+  min-width: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.text-cell > h3 {
+  max-width: 25ch;
+  margin: 0 0 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.text-cell > p {
+  max-width: 58ch;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.text-cell > p + p,
+.text-cell > h2 + p,
+.text-cell > .text-link {
+  margin-top: 1.5rem;
+}
+
+.text-cell > .panel-kicker {
+  margin: 0 0 1.25rem;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.tool-list.text-grid {
+  border-top: 1px solid var(--line);
+}
+
+.text-grid .tool-item {
+  border-top: 0;
+}
+
+.membership-list.text-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 3rem;
+}
+
+.text-grid .membership-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.text-grid .membership-row h3 {
+  margin: 0;
+}
+
+.text-grid .membership-row .price {
+  min-width: 0;
+  margin-top: auto;
+  padding-top: 1rem;
+  text-align: left;
+}
+
+.join-options,
+.join-inquiry,
+.made-section {
+  display: block;
+}
+
+.membership-options-grid {
+  margin-top: 2rem;
+}
+
+.text-grid .join-option {
+  border-top: 0;
+  border-left: 0;
+}
+
+.membership-options-grid .join-option-workshop {
+  background: var(--orange);
+}
+
+.inquiry-grid {
+  align-items: stretch;
+}
+
+.join-memberships .text-cell > h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.join-membership-includes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 2rem;
+  margin: 1.5rem 0 0;
+  padding-left: 1.15rem;
+  line-height: 1.5;
+}
+
+.join-email-box {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 2rem;
+  background: var(--paper-deep);
+}
+
+.join-email-box > h3 {
+  max-width: 40ch;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.35;
+}
+
+.join-email-box > .text-link {
+  justify-self: start;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.inquiry-grid .join-form {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.inquiry-grid .join-form > label:nth-of-type(n + 3),
+.inquiry-grid .join-form > .button,
+.inquiry-grid .join-form-note {
+  grid-column: 1 / -1;
+}
+
+.inquiry-grid .join-form-note {
+  margin-top: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.members-empty.text-grid {
+  padding: 0;
+}
+
+.members-empty .specialties-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-self: stretch;
+  border: 0;
+}
+
+.members-empty .specialties-grid li {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  font-size: 0.8rem;
+}
+
+.contact-grid.text-grid {
+  gap: 0;
+}
+
+.contact-grid.text-grid .contact-card {
+  border-top: 0;
+  border-left: 0;
 }
 
 @media (min-width: 1500px) {
@@ -3018,6 +3189,13 @@ select {
   }
 }
 
+@media (max-width: 760px) {
+  .text-grid,
+  .membership-list.text-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 620px) {
   .site-header {
     min-height: 4.25rem;
@@ -3122,16 +3300,39 @@ select {
 
   .history-entry {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-left: 2rem;
+  }
+
+  .history-timeline {
+    --timeline-rail: 0.4rem;
+  }
+
+  .history-timeline::before {
+    top: 0.4rem;
+  }
+
+  .history-entry::before {
+    top: 0.3rem;
   }
 
   .history-date {
-    padding-top: 1.5rem;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .history-copy {
     gap: 1rem;
-    padding-top: 1rem;
+    margin-left: 0;
+    padding: 1.25rem;
+  }
+
+  .inquiry-grid .join-form {
+    grid-template-columns: 1fr;
+  }
+
+  .join-membership-includes,
+  .join-email-box {
+    grid-template-columns: 1fr;
   }
 
   .contact-card {

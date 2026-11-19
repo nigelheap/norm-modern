@@ -36,7 +36,6 @@ onUnmounted(() => {
       </RouterLink>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/history">History</RouterLink>
         <RouterLink to="/workshop">Workshop</RouterLink>
         <RouterLink to="/studios">Studios</RouterLink>
@@ -81,7 +80,6 @@ onUnmounted(() => {
 
     <Transition name="menu">
       <nav v-if="menuOpen" id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation">
-        <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/history">History</RouterLink>
         <RouterLink to="/workshop">Workshop</RouterLink>
         <RouterLink to="/studios">Studios</RouterLink>
